@@ -45,29 +45,26 @@ banking::void accountProfile(){
     cout << "\nMobile phone: " << mobile_phone << endl;
     cout << "\nGenre: " << genre << endl;
     cout << "-----------------------" << endl;
-    cout << "\nDo you like to return to menu <Y/n> ", cin >> option << endl;
+    cout << "\nWould you like to return to menu <Y/n> ", cin >> option << endl;
+    //Hot fixing bug exception "Y/n"
     if (option == "Y"){
-        //return to menu
+        return main();
     }else{
-        //exit
-    }
+        exit(1);
+    };
 };
     
 
 banking::double newAccount(status=true){
         
-        string full_name, date_time, city_born, current_city;
-        double id_card, account_id = rand()%1000000000;
-        char genre;
-        bool status; 
-        cout << "Welcome to Colombian Bank!\n Please enter your ID card:\n", cin >> id_card << endl;
-        cout << "Enter your full name:\n", cin >> full_name << endl;
-        cout << "Enter your birthday date:\n", cin >> date_time << endl;
-        cout << "Enter your genre (that appear in the ID card):\n", cin >> genre << endl;
-        cout << "Enter the city where you was tramited your ID card:\n", cin >> city_id << endl;
-        cout << "Enter your current city:\n", cin >> current_city << endl;
-        cout << "Welcome! " << full_name << " your new account id is:\n" << account_id, cin >> account_id << endl; 
-        return account_id;
+    cout << "Welcome to Camilo's Bank!\n Please enter your ID card:\n", cin >> id_card << endl;
+    cout << "Enter your full name:\n", cin >> full_name << endl;
+    cout << "Enter your birthday date:\n", cin >> date_time << endl;
+    cout << "Enter your genre (that appear in the ID card):\n", cin >> genre << endl;
+    cout << "Enter the city where you was tramited your ID card:\n", cin >> city_id << endl;
+    cout << "Enter your current city:\n", cin >> current_city << endl;
+    cout << "Welcome! " << full_name << " your new account id is:\n" << account_id, cin >> account_id << endl; 
+    return account_id;
 };
     
 banking::double depositAmount(double id_card){
@@ -122,6 +119,50 @@ banking::void modifyAccount(){
 
 
 int main(){
+    
+    banking user; 
+    int option;
+    
+    cout << "\n\t01. NEW ACCOUNT" << endl;
+    cout << "\n\t02. ACCOUNT PROFILE" << endl;
+    cout << "\n\t03. MODIFY ACCOUNT" << endl;
+    cout << "\n\t04. DEPOSITE AMOUNT" << endl;
+    cout << "\n\t05. WITH DRAW AMOUNT" << endl;
+    cout << "\n\t06. BALANCE ENQUIRY" << endl;
+    cout << "\n\t07. ALL ACCOUNT HOLDER" << endl;
+    cout << "\n\t08. CLOSE ACCOUNT" << endl;
+    cout << "Enter your option <1-8> ", cin >> option << endl;
+    
+    
+    switch(option){
+        
+        case 1: user.newAccount();
+        break;
+        
+        case 2: user.accountProfile();
+        break;
+        
+        case 3: user.modifyAccount();
+        break;
+
+        case 4: user.depositAmount();
+        break;
+
+        case 5: user.withdrawAmount();
+        break;
+
+        case 6: user.balanceEnquiry();
+        break;
+
+        case 7: user.allAccountHolder();
+        break;
+
+        case 8: user.closeAccount();
+        break;
+
+        default: cout << "\n\tOption doesn't exist";
+        exit(0)
+    };
 
     return 0;
 }
