@@ -1,8 +1,12 @@
+// Inicio Cabecera
 #include<iostream>
 using namespace std;
 #include<stdlib.h>
 #include<fstream>
 #include<cmath>
+#include<cstring>
+#include<ctime>
+// Fin de cabecera
 
 class banking{
 
