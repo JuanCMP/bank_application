@@ -1,4 +1,4 @@
-// Inicio Cabecera
+// Inicio Cabecera I
 #include<iostream>
 using namespace std;
 #include<stdlib.h>
@@ -6,7 +6,8 @@ using namespace std;
 #include<cmath>
 #include<cstring>
 #include<ctime>
-// Fin de cabecera
+// Este es el fin de la cabecera I
+
 
 class banking{
 
