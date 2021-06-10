@@ -2,6 +2,7 @@
 using namespace std;
 #include<stdlib.h>
 #include<fstream>
+#include<cmath>
 
 class banking{
 
