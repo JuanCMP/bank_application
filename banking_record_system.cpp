@@ -36,7 +36,7 @@ class banking{
     long mobile_phone; 
 };
 
-banking::void accountProfile(int name){
+banking::void accountProfile(){
     
     char option[1];
     cout << "ACCOUNT PROFILE" << endl;
