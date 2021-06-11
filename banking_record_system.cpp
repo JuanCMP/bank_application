@@ -25,7 +25,7 @@ class banking{
 
     private:
 
-    char first_name[100];
+    char first_name[20];
     char last_name[20];
     long id_account;
     char birthday_date[10];
