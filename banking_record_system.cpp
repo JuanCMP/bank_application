@@ -1,7 +1,13 @@
+// Inicio Cabecera I
 #include<iostream>
 using namespace std;
 #include<stdlib.h>
 #include<fstream>
+#include<cmath>
+#include<cstring>
+#include<ctime>
+// Este es el fin de la cabecera I
+
 
 class banking{
 
@@ -19,7 +25,7 @@ class banking{
 
     private:
 
-    char first_name[20];
+    char first_name[5];
     char last_name[20];
     long id_account;
     char birthday_date[10];
@@ -30,7 +36,7 @@ class banking{
     long mobile_phone; 
 };
 
-banking::void accountProfile(){
+banking::void accountProfile(bool retros){
     
     char option[1];
     cout << "ACCOUNT PROFILE" << endl;
